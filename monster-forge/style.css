@@ -1,0 +1,77 @@
+:root { color-scheme: light; font-family: "Leelawadee UI", Tahoma, system-ui, sans-serif; color: #252b32; background: #f5f6f8; line-height: 1.65; --muted: #68717e; --line: #e0e4e9; --accent: #355cc9; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, select { font: inherit; }
+button, select, a { -webkit-tap-highlight-color: transparent; }
+button, select { border: 1px solid #cbd1da; border-radius: 7px; background: white; color: inherit; }
+button { padding: 9px 17px; font-weight: 600; cursor: pointer; }
+button:hover:not(:disabled) { background: #edf1fa; border-color: var(--accent); }
+button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+button.primary:hover:not(:disabled) { background: #294aa9; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #8da7f4; outline-offset: 3px; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-family: system-ui, sans-serif; font-size: 25px; letter-spacing: -.9px; line-height: 1.3; }
+h2 { font-size: 19px; font-weight: 700; }
+h3 { font-size: 15px; }
+.site-header { max-width: 1180px; padding: 32px 28px 26px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); }
+.site-header p { font-size: 12px; color: var(--muted); margin-top: 5px; }
+.brand-dot { color: var(--accent); }
+.help-link { color: #4b5565; font-size: 14px; text-underline-offset: 4px; white-space: nowrap; }
+main { max-width: 1180px; margin: 0 auto; padding: 30px 28px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.section-description { font-size: 13px; color: var(--muted); margin: 6px 0 20px; }
+.muted { color: var(--muted); font-size: 12px; }
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.monster-card { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: white; padding: 20px 17px 16px; }
+.portrait { height: 120px; display: grid; place-items: center; margin-bottom: 12px; }
+img { image-rendering: pixelated; object-fit: contain; max-width: 100%; }
+.monster-card h3 { font-size: 17px; overflow-wrap: anywhere; }
+.description { color: var(--muted); font-size: 12px; min-height: 42px; margin: 5px 0 16px; overflow-wrap: anywhere; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin: 0; }
+.stat { display: flex; justify-content: space-between; font-size: 13px; }
+.stat dt { color: var(--muted); }
+.stat dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 600; }
+.card-bottom { margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 5px 10px; justify-content: space-between; font-size: 12px; }
+.valid { color: #28704c; }
+.error { color: #ab303b; font-size: 13px; overflow-wrap: anywhere; }
+.monster-card .error { margin-top: 8px; }
+.loadout { margin-top: 12px; font-size: 12px; overflow-wrap: anywhere; }
+.loadout p + p { margin-top: 4px; }
+.loadout p:nth-child(3) { margin-top: 10px; }
+.cap-notice { color: #805015; background: #fff6e7; padding: 9px; margin-top: 10px; font-size: 12px; overflow-wrap: anywhere; }
+.ability-guide { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; font-size: 12px; }
+.ability-guide summary { cursor: pointer; font-weight: 600; }
+.ability-guide p { margin-top: 8px; overflow-wrap: anywhere; }
+.ability-guide h3 { margin-top: 16px; font-size: 13px; }
+.fighter-effects { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; margin-top: 6px; }
+.workshop { margin-top: 23px; padding: 18px 0; border-top: 1px solid var(--line); }
+.workshop p { font-size: 13px; margin-top: 8px; }
+code { font-size: 12px; overflow-wrap: anywhere; }
+.arena { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 23px; min-width: 0; }
+.status { font-size: 11px; color: #536277; padding: 3px 8px; background: #f0f2f6; border-radius: 5px; white-space: nowrap; }
+.selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.selection-field { min-width: 0; }
+label { display: block; font-size: 12px; color: var(--muted); min-width: 0; }
+select { width: 100%; padding: 9px 26px 9px 10px; margin-top: 5px; font-size: 13px; text-overflow: ellipsis; }
+#selection-error { margin-top: 10px; }
+.fighters { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 25px 0 22px; }
+.fighter { text-align: center; min-width: 0; }
+.fighter h3 { font-size: 14px; margin-top: 7px; overflow-wrap: anywhere; }
+.hp-value { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin: 5px 0; }
+progress { appearance: none; width: 100%; height: 7px; border: none; border-radius: 4px; background: #edf0f3; overflow: hidden; }
+progress::-webkit-progress-bar { background: #edf0f3; }
+progress::-webkit-progress-value { background: #53a57a; }
+progress::-moz-progress-bar { background: #53a57a; }
+.battle-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.battle-actions button { font-size: 13px; }
+.result { padding: 13px 0; margin-top: 13px; font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.result.finished { color: var(--accent); }
+.log-heading { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 17px; gap: 10px; }
+.battle-log { list-style: none; margin: 10px 0 0; padding: 0; height: 164px; overflow-y: auto; overscroll-behavior: contain; font-size: 12px; overflow-wrap: anywhere; }
+.battle-log li { padding: 7px 0; border-bottom: 1px solid #f0f2f5; }
+.empty-log { color: var(--muted); }
+footer { max-width: 1124px; margin: 0 auto; padding: 15px 0 25px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+@media (max-width: 950px) { main { grid-template-columns: 1fr; max-width: 680px; gap: 20px; } footer { margin: 0 28px; } }
+@media (max-width: 480px) { .site-header { padding: 22px 18px; } h1 { font-size: 23px; } main { padding: 22px 18px; } .gallery { grid-template-columns: 1fr; } .monster-card { padding: 18px; } .portrait { height: 96px; } .description { min-height: 0; } .arena { padding: 18px; } .selectors { grid-template-columns: 1fr; gap: 10px; } .fighters { gap: 14px; } .fighter img { width: 80px; height: 80px; } footer { margin: 0 18px; } }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="สร้างมอนสเตอร์ในไฟล์ JavaScript แล้วฝึก Git และ GitHub ผ่านการต่อสู้">
+  <title>Monster Forge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div><h1>Monster Forge<span class="brand-dot">.</span></h1></div>
+  </header>
+  <main>
+    <section aria-labelledby="gallery-heading" class="gallery-section">
+      <div class="section-heading"><h2 id="gallery-heading">มอนสเตอร์ของเรา</h2><span id="monster-count" class="muted"></span></div>
+      <div id="gallery" class="gallery"></div>
+      <details class="ability-guide"><summary>เพดานแต้มและความสามารถที่เลือกได้</summary><div id="ability-rules"></div></details>
+    </section>
+    <section class="arena" aria-label="สนามประลอง">
+      <div class="selectors">
+        <div class="selection-field"><label for="select-a">มอนสเตอร์ A</label><select id="select-a"></select></div>
+        <div class="selection-field"><label for="select-b">มอนสเตอร์ B</label><select id="select-b"></select></div>
+      </div>
+      <p id="selection-error" class="error" role="alert" hidden></p>
+      <div class="fighters">
+        <article id="fighter-a" class="fighter"><img alt="" width="96" height="96"><h3>เลือกมอนสเตอร์ A</h3><p class="hp-value">HP —</p><progress max="100" value="100" aria-label="HP มอนสเตอร์ A"></progress></article>
+        <article id="fighter-b" class="fighter"><img alt="" width="96" height="96"><h3>เลือกมอนสเตอร์ B</h3><p class="hp-value">HP —</p><progress max="100" value="100" aria-label="HP มอนสเตอร์ B"></progress></article>
+      </div>
+      <div class="battle-actions">
+        <button id="start" type="button" class="primary">เริ่มต่อสู้</button>
+        <button id="rematch" type="button" hidden>สู้ใหม่</button>
+        <button id="skip" type="button" hidden>ดูผลทันที</button>
+        <button id="reset" type="button">ล้างสนาม</button>
+      </div>
+      <div id="result" class="result" role="status" aria-live="polite">เลือกมอนสเตอร์สองตัวเพื่อเริ่มต่อสู้</div>
+      <div class="log-heading"><h3>บันทึกการต่อสู้</h3><span id="turn-count" class="muted">0 ตา</span></div>
+      <ol id="battle-log" class="battle-log" aria-label="บันทึกการต่อสู้"><li class="empty-log">การโจมตีแต่ละตาจะแสดงที่นี่</li></ol>
+    </section>
+  </main>
+  <noscript>กรุณาเปิด JavaScript เพื่อใช้งาน Monster Forge</noscript>
+  <script src="js/data.js"></script>
+  <script src="monsters/monster-a.js"></script>
+  <script src="monsters/monster-b.js"></script>
+  <script src="monsters/boss.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
