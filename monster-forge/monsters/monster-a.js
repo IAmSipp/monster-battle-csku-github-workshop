@@ -1,7 +1,7 @@
 // คน A: แก้ชื่อ คำอธิบาย รูป และแต้มด้านล่าง แล้วรีเฟรชเว็บ
 window.MONSTERS.push({
   id: "monster-a", // ไม่ต้องเปลี่ยน ID
-  name: "แมวไฟขี้เซา",
+  name: "แมวไฟขี้เซาา",
   description: "ชอบนอนกลางแดด แต่จะพ่นไฟเมื่อหิว",
   image: "assets/monster-a.svg", // ใส่รูปของตัวเองใน assets/ 
   skill: "strike", // strike | poison | heal | shield (ทุก 3 ตาตัวเอง)
